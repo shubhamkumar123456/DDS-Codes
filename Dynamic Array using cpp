@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-   int n ;
+   int n ;  //4
    cout<<"enter the size of array : ";
    cin>>n;
    
@@ -17,8 +17,28 @@ int main() {
    for(int i=0; i<n; i++){
        cout<<arr[i]<<endl;
    }
-   
-   
 
+   int n1;
+   cout<<"enter the new size of array : ";
+   cin>>n1;
+
+   int *arr1 = new int[n1]; //8// [ , ]
+
+//    copy all the old element in new array 
+   for(int i=0; i<n1; i++){
+    arr1[i] = arr[i];
+   }
+
+   if(n1> n){
+    for(int i =n; i<n1; i++){
+        cout<<"enter the element at arr["<<i<<"] index : ";
+        cin>>arr[i]; 
+    }
+   }
+
+   cout<<"element in new array = ";
+   for(int i = 0 ; i< n1; i++){
+    cout<<arr[i]<<endl;
+   }
     return 0;
 }
